@@ -4,3 +4,4 @@ pandas
 seaborn
 sqlalchemy
 numpy
+psycopg2-binary
