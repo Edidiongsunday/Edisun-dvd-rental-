@@ -163,7 +163,7 @@ elif menu == "Top_spenders_rentals":
     # Pie chart
     fig, ax = plt.subplots(figsize=(8, 8))
     ax.pie(
-        Top_spenders_rentals['Total_spent'],
+        Top_spenders_rentals['total_spent'],
         labels=Top_spenders_rentals['customer_name'],
         autopct=lambda pct: f"{pct:.1f}%\n(${pct*Top_spenders_rentals['total_spent'].sum()/100:.2f})",  
         startangle=140,
@@ -204,7 +204,7 @@ elif menu == "Category_revenue":
     #bar chart of film categories by revenue
     st.subheader("Bar Chart of Top 5 Film Categories by Revenue")
     plt.figure(figsize=(8,5))
-    plt.bar(Category_revenue['Movie_category'], Category_revenue['total_revenue'], color=plt.cm.Paired.colors)
+    plt.bar(Category_revenue['movie_category'], Category_revenue['total_revenue'], color=plt.cm.Paired.colors)
     plt.xlabel("Movie Category")
     plt.ylabel("Total Revenue ($)")
     plt.title("Top 5 Film Categories by Revenue")
@@ -471,3 +471,4 @@ st.success("💡 These insights reveal customer preferences, revenue drivers, an
 st.sidebar.success("Thank you for using the app! Feel free to explore and interact with the data.")
 st.balloons()
 st.write("Developed by Edisun - Data Enthusiast")
+
